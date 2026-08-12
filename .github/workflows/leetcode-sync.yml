@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Sync LeetCode submissions
-        uses: joshcai/leetcode-sync@v2
+        uses: joshcai/leetcode-sync@v1.7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{github.token}}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: solutions
